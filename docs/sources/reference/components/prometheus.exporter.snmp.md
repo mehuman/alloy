@@ -109,7 +109,7 @@ from `prometheus.exporter.snmp`:
 
 ```alloy
 prometheus.exporter.snmp "example" {
-    config_file = "snmp_modules.yml"
+    filename = "snmp_modules.yml"
 
     target "network_switch_1" {
         address     = "192.168.1.2"
@@ -142,7 +142,7 @@ This example is the same above with using an embedded configuration (with secret
 
 ```alloy
 local.file "snmp_config" {
-    path      = "snmp_modules.yml"
+    filename      = "snmp_modules.yml"
     is_secret = true
 }
 
